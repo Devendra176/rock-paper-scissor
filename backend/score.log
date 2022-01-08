@@ -984,3 +984,33 @@ TypeError: int() argument must be a string, a bytes-like object or a number, not
 2022-01-08 19:19:16,088 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\urls.py changed, reloading.
 2022-01-08 19:19:19,994 : INFO : C:\Users\dell\Desktop\django-game\backend\backend\urls.py changed, reloading.
 2022-01-08 19:20:25,451 : INFO : C:\Users\dell\Desktop\django-game\backend\backend\urls.py changed, reloading.
+2022-01-08 19:49:02,574 : WARNING : Not Found: /api/game//predict/value/
+2022-01-08 19:49:21,225 : ERROR : Internal Server Error: /api/game/predict/value/
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\backend\game\api\views.py", line 43, in post
+    pv = PredictValueMethod(int(user_value), predict_val)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2022-01-08 19:49:52,026 : WARNING : Bad Request: /api/game/predict/value/
+2022-01-08 19:50:27,123 : INFO : user Selected PAPER
+2022-01-08 19:50:27,124 : INFO : computer Selected SCISSOR
+2022-01-08 19:50:52,717 : INFO : user Selected ROCK
+2022-01-08 19:50:52,717 : INFO : computer Selected SCISSOR
+2022-01-08 19:50:52,717 : INFO : you win,computer select scissors
+2022-01-08 19:52:06,610 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\predict_val.py changed, reloading.
+2022-01-08 19:52:41,189 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\predict_val.py changed, reloading.

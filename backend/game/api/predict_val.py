@@ -20,7 +20,9 @@ class PredictValueMethod():
         user_val = self.user_val
         predicted_val = self.predicted_val
         response = {}
+        response['user_data'] = self.user_val
         response['com_value'] = options[self.predicted_val]
+        response['com_data'] = self.predicted_val
 
         if user_val == predicted_val:
             response['msg'] = 'this round is tie'
