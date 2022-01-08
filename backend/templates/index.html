@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container" id="game_inti">
+    <form  method="POST" class="form" role="form">
+        <div class="row">
+            <div class="center-block">
+                <label for="username" class="visually-hidden">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
+            </div>
+        </div><br>
+        <div class="row" style="margin-inline-start: 50%;">
+            <div class="center-block">
+                <button type="submit" class="btn btn-primary mb-3 text-center" href_url="{% url 'api_add_users' %}" id="start_game" >Start Game</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Here is main game  -->
+<div class="container text-center" id="main_game" style="display: none;">
+    <div class="row">
+        <div class="center-block">
+            <button id="btnRock" class="btn btn-primary btn-md center-block" href_url="{% url 'api_predict_value' %}" Style="width: 100px; margin-inline-start: 10px;" value=1 >Rock</button>
+            <button id="btnPaper" class="btn btn-primary btn-md center-block" href_url="{% url 'api_predict_value' %}" Style="width: 100px; margin-inline-start: 10px;" value=2 >Paper</button>
+            <button id="btnScissor" class="btn btn-primary btn-md center-block" href_url="{% url 'api_predict_value' %}" Style="width: 100px; margin-inline-start: 10px;" value=3 >Scissor</button>
+         </div>
+    </div><br>
+
+    <h4 id="msg" ></h4>
+
+    <div class="row" style="margin-block-start:70px;">
+        <div class="center-block">
+            <button id="btnPridict" class="btn btn-primary btn-md center-block " Style="width: 100px; margin-inline-start: 10px; background-color: yellow; color:black;"></button>
+         </div>
+    </div><br>
+
+    <div class="row">
+        <div class="center-block">
+            <button type="hidden" id="hiddenbtn" href_url="{% url 'api_predict_final_score' %}" value=1 ></button>
+            <button id="yourScore" class="btn btn-primary btn-md center-block" Style="width: 100px; margin-inline-start: 10px;" value=0 disabled >Your Score</button>
+            <button id="comScore" class="btn btn-primary btn-md center-block" Style="width: 100px; margin-inline-start: 10px; background-color: yellow; color:black;" value=0 disabled >Computer Score</button>
+         </div>
+    </div><br>
+    <div class="row" id="new_row" style="display: none;">
+        <div class="center-block" id="newgame" style="cursor:pointer;">
+            <h3>New Game<h3>
+        </div>
+    </div><br>
+    <div class="row" id="endgame">
+        <div class="center-block"  style="cursor:pointer;">
+            <h3>End Game<h3>
+        </div>
+    </div><br>
+</div>
+{% endblock content %}
