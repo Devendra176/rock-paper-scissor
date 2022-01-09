@@ -22,7 +22,6 @@ $(document).ready(function(){
                     $('#btnScissor').prop('disabled',true);
                     $('#msg').text(response['msg']);
                     $('#new_row').css("display","block");
-                    
                 },
             });
         }
@@ -36,7 +35,6 @@ $(document).ready(function(){
               if (response.status){
                 $('#btnPridict').text(response.predicted_data['com_value']);
                 $('#msg').text(response.predicted_data['msg']);
-                console.log(hidden);
                 if((response.predicted_data['user_score'] == true) && (response.predicted_data['com_score'] == true)){
 
                     $('#yourScore').val(parseInt(your_score)+1);
@@ -57,9 +55,10 @@ $(document).ready(function(){
               }
 
                 },
-                
-            
-              });
+                error: function(response) {
+                    $('#msg').text(response['errors']);
+                },
+            });
         
         }
     });

@@ -3,7 +3,8 @@ from rest_framework.generics import CreateAPIView
 
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.serializers import Serializer
+
+from rest_framework.permissions import AllowAny
 from .serializers import (AddUsersSerializer, PlayGameSerializer, FinalResultSerializer)
 from .predict_val import PredictValueMethod
 import random
@@ -13,6 +14,7 @@ from .predict_val import logging
 class AddUser(CreateAPIView):
     serializer_class = AddUsersSerializer
     renderer_classes = [ JSONRenderer ]
+    permission_classes = [AllowAny]
 
     def post(self, request, *args, **kwargs):
         '''
@@ -39,10 +41,15 @@ class PredictValueView(CreateAPIView):
         '''
         
         predict_val = random.randint(1,3)
-        user_value = request.data.get('user_value')
-        pv = PredictValueMethod(int(user_value), predict_val)
-        final = pv.find_score()
-        return Response(data={'predicted_data':final, 'status_code' : status.HTTP_200_OK , 'status' : True })
+        data = {
+            'user_value' : request.data.get('user_value')
+        }
+        serializer = PlayGameSerializer(data=data)
+        if serializer.is_valid():
+            pv = PredictValueMethod(int(data['user_value']), predict_val)
+            final = pv.find_score()
+            return Response(data={'predicted_data':final, 'status_code' : status.HTTP_200_OK , 'status' : True ,'serialize_data': serializer.data })
+        return Response(data={ 'errors' : serializer.errors, 'status_code' : status.HTTP_400_BAD_REQUEST,'status' : False })
 
 class FinalResultView(CreateAPIView):
     renderer_classes = [ JSONRenderer ]
@@ -52,8 +59,14 @@ class FinalResultView(CreateAPIView):
         '''
         Post the value choosen by user to the api.
         '''
-        your_score = request.data.get('your_score')
-        com_score = request.data.get('com_score')
-        pv = PredictValueMethod(int(your_score),int(com_score))
-        result = pv.final_result()
-        return Response(data={'msg':result['msg'],'status_code' : status.HTTP_200_OK , 'status' : True })
+        data = {
+            'your_score' : request.data.get('your_score'),
+            'com_score' : request.data.get('com_score'),
+        }
+
+        serializer = FinalResultSerializer(data=data)
+        if serializer.is_valid():
+            pv = PredictValueMethod(int(data['your_score']),int(data['com_score']))
+            result = pv.final_result()
+            return Response(data={'msg':result['msg'],'status_code' : status.HTTP_200_OK , 'status' : True, 'serialize_data':serializer.data })
+        return Response(data={ 'errors' : serializer.errors, 'status_code' : status.HTTP_400_BAD_REQUEST,'status' : False })

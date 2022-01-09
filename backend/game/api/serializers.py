@@ -6,9 +6,9 @@ class AddUsersSerializer(serializers.ModelSerializer):
         model = PlayedGameBy
         fields = '__all__'
 
-class PlayGameSerializer(serializers.ModelSerializer):
+class PlayGameSerializer(serializers.Serializer):
     user_value = serializers.CharField()
 
-class FinalResultSerializer(serializers.ModelSerializer):
+class FinalResultSerializer(serializers.Serializer):
     your_score = serializers.CharField()
     com_score = serializers.CharField()

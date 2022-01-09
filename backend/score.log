@@ -1014,3 +1014,428 @@ TypeError: int() argument must be a string, a bytes-like object or a number, not
 2022-01-08 19:50:52,717 : INFO : you win,computer select scissors
 2022-01-08 19:52:06,610 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\predict_val.py changed, reloading.
 2022-01-08 19:52:41,189 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\predict_val.py changed, reloading.
+2022-01-08 19:53:45,444 : INFO : user Selected ROCK
+2022-01-08 19:53:45,446 : INFO : computer Selected ROCK
+2022-01-08 19:53:45,446 : INFO : this round is tie
+2022-01-09 22:04:28,443 : WARNING : Not Found: /favicon.ico
+2022-01-09 22:07:32,168 : INFO : C:\Users\dell\Desktop\django-game\backend\backend\urls.py changed, reloading.
+2022-01-09 22:08:08,216 : INFO : C:\Users\dell\Desktop\django-game\backend\backend\urls.py changed, reloading.
+2022-01-09 22:08:39,083 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\urls.py changed, reloading.
+2022-01-09 22:11:28,004 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 22:12:25,800 : INFO : User Added : {'id': 123, 'users': 'devu', 'created_at': '2022-01-09T16:42:25.005049Z'}
+2022-01-09 22:12:30,346 : ERROR : Internal Server Error: /api/game/predict/value/
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2022-01-09 22:12:54,776 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 22:13:06,744 : INFO : User Added : {'id': 124, 'users': 'devu', 'created_at': '2022-01-09T16:43:06.483625Z'}
+2022-01-09 22:13:08,049 : ERROR : Internal Server Error: /api/game/predict/value/
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\dell\Desktop\django-game\backend\game\api\views.py", line 46, in post
+    print(serializer.is_valid())
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\serializers.py", line 479, in to_internal_value
+    for field in fields:
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\serializers.py", line 362, in _writable_fields
+    for field in self.fields.values():
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\rest_framework\serializers.py", line 1027, in get_fields
+    assert hasattr(self, 'Meta'), (
+AssertionError: Class PlayGameSerializer missing "Meta" attribute
+2022-01-09 22:13:58,295 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\serializers.py changed, reloading.
+2022-01-09 22:15:50,233 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\serializers.py changed, reloading.
+2022-01-09 22:16:08,706 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\serializers.py changed, reloading.
+2022-01-09 22:16:19,975 : INFO : User Added : {'id': 125, 'users': 'devu', 'created_at': '2022-01-09T16:46:19.719240Z'}
+2022-01-09 22:16:21,263 : INFO : user Selected ROCK
+2022-01-09 22:16:21,263 : INFO : computer Selected PAPER
+2022-01-09 22:16:21,263 : INFO : computer won
+2022-01-09 22:16:27,260 : INFO : user Selected PAPER
+2022-01-09 22:16:27,260 : INFO : computer Selected PAPER
+2022-01-09 22:16:27,260 : INFO : this round is tie
+2022-01-09 22:16:30,645 : INFO : user Selected SCISSOR
+2022-01-09 22:16:30,645 : INFO : computer Selected SCISSOR
+2022-01-09 22:16:30,645 : INFO : this round is tie
+2022-01-09 22:16:36,936 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:16:36,936 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:16:45,700 : INFO : user Selected SCISSOR
+2022-01-09 22:16:45,700 : INFO : computer Selected PAPER
+2022-01-09 22:16:45,700 : INFO : you win ,computer select paper
+2022-01-09 22:16:57,224 : INFO : user Selected ROCK
+2022-01-09 22:16:57,224 : INFO : computer Selected ROCK
+2022-01-09 22:16:57,224 : INFO : this round is tie
+2022-01-09 22:17:04,058 : INFO : user Selected PAPER
+2022-01-09 22:17:04,065 : INFO : computer Selected SCISSOR
+2022-01-09 22:17:14,168 : INFO : This game is tie! click at New game To play again
+2022-01-09 22:17:14,176 : INFO : This is 3 round game and This game is tie! click at New game To play again with 2/2
+2022-01-09 22:19:46,226 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 22:22:16,680 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 22:22:24,342 : INFO : User Added : {'id': 126, 'users': 'devu', 'created_at': '2022-01-09T16:52:23.774655Z'}
+2022-01-09 22:22:24,981 : INFO : user Selected ROCK
+2022-01-09 22:22:24,981 : INFO : computer Selected PAPER
+2022-01-09 22:22:24,981 : INFO : computer won
+2022-01-09 22:22:26,100 : INFO : user Selected PAPER
+2022-01-09 22:22:26,100 : INFO : computer Selected PAPER
+2022-01-09 22:22:26,100 : INFO : this round is tie
+2022-01-09 22:22:26,808 : INFO : user Selected SCISSOR
+2022-01-09 22:22:26,808 : INFO : computer Selected ROCK
+2022-01-09 22:22:26,816 : INFO : you loose,computer select rock
+2022-01-09 22:22:27,805 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:22:27,805 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/1
+2022-01-09 22:23:10,288 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 22:23:46,546 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 22:26:33,477 : INFO : User Added : {'id': 127, 'users': 'devu', 'created_at': '2022-01-09T16:56:32.470844Z'}
+2022-01-09 22:26:39,626 : INFO : user Selected ROCK
+2022-01-09 22:26:39,626 : INFO : computer Selected ROCK
+2022-01-09 22:26:39,626 : INFO : this round is tie
+2022-01-09 22:26:44,349 : INFO : user Selected PAPER
+2022-01-09 22:26:44,349 : INFO : computer Selected PAPER
+2022-01-09 22:26:44,349 : INFO : this round is tie
+2022-01-09 22:26:46,539 : INFO : user Selected SCISSOR
+2022-01-09 22:26:46,539 : INFO : computer Selected ROCK
+2022-01-09 22:26:46,539 : INFO : you loose,computer select rock
+2022-01-09 22:26:59,547 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:26:59,547 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:06,633 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:06,633 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:08,469 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:08,469 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:09,120 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:09,120 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:09,514 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:09,514 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:09,733 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:09,733 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:09,928 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:09,928 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:10,123 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:10,123 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:10,331 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:10,331 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:27:10,521 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:27:10,521 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:28:08,173 : INFO : User Added : {'id': 128, 'users': 'devu', 'created_at': '2022-01-09T16:58:07.799527Z'}
+2022-01-09 22:28:22,680 : INFO : user Selected ROCK
+2022-01-09 22:28:22,688 : INFO : computer Selected ROCK
+2022-01-09 22:28:22,688 : INFO : this round is tie
+2022-01-09 22:28:40,062 : INFO : user Selected PAPER
+2022-01-09 22:28:40,062 : INFO : computer Selected PAPER
+2022-01-09 22:28:40,062 : INFO : this round is tie
+2022-01-09 22:28:44,602 : INFO : user Selected SCISSOR
+2022-01-09 22:28:44,602 : INFO : computer Selected PAPER
+2022-01-09 22:28:44,602 : INFO : you win ,computer select paper
+2022-01-09 22:28:54,584 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/2
+2022-01-09 22:31:17,599 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\predict_val.py changed, reloading.
+2022-01-09 22:33:22,821 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\predict_val.py changed, reloading.
+2022-01-09 22:33:42,799 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\predict_val.py changed, reloading.
+2022-01-09 22:33:47,617 : INFO : User Added : {'id': 129, 'users': 'devu', 'created_at': '2022-01-09T17:03:47.338772Z'}
+2022-01-09 22:33:48,958 : INFO : user Selected ROCK
+2022-01-09 22:33:48,958 : INFO : computer Selected PAPER
+2022-01-09 22:33:48,958 : INFO : you loose, computer choose Paper.
+2022-01-09 22:34:25,043 : INFO : User Added : {'id': 130, 'users': 'admin', 'created_at': '2022-01-09T17:04:24.888615Z'}
+2022-01-09 22:34:25,931 : INFO : user Selected ROCK
+2022-01-09 22:34:25,931 : INFO : computer Selected ROCK
+2022-01-09 22:34:25,931 : INFO : this round is Tie Both choosed ROCK
+2022-01-09 22:34:31,343 : INFO : user Selected PAPER
+2022-01-09 22:34:31,343 : INFO : computer Selected PAPER
+2022-01-09 22:34:31,343 : INFO : this round is Tie Both choosed PAPER
+2022-01-09 22:35:08,794 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\predict_val.py changed, reloading.
+2022-01-09 22:35:14,327 : INFO : User Added : {'id': 131, 'users': 'devu', 'created_at': '2022-01-09T17:05:14.083951Z'}
+2022-01-09 22:36:16,350 : INFO : User Added : {'id': 132, 'users': 'devu', 'created_at': '2022-01-09T17:06:16.227813Z'}
+2022-01-09 22:36:17,369 : INFO : user Selected ROCK
+2022-01-09 22:36:17,377 : INFO : computer Selected SCISSOR
+2022-01-09 22:36:17,377 : INFO : you win,computer select scissor
+2022-01-09 22:36:19,264 : INFO : user Selected PAPER
+2022-01-09 22:36:19,272 : INFO : computer Selected ROCK
+2022-01-09 22:36:19,272 : INFO : you win,computer select rock
+2022-01-09 22:36:20,468 : INFO : user Selected SCISSOR
+2022-01-09 22:36:20,468 : INFO : computer Selected SCISSOR
+2022-01-09 22:36:20,468 : INFO : this round is Tie Both choose SCISSOR
+2022-01-09 22:39:14,648 : INFO : User Added : {'id': 133, 'users': 'devu', 'created_at': '2022-01-09T17:09:14.456170Z'}
+2022-01-09 22:39:15,544 : INFO : user Selected ROCK
+2022-01-09 22:39:15,544 : INFO : computer Selected SCISSOR
+2022-01-09 22:39:15,552 : INFO : you win,computer select scissor
+2022-01-09 22:39:16,656 : INFO : user Selected PAPER
+2022-01-09 22:39:16,656 : INFO : computer Selected PAPER
+2022-01-09 22:39:16,656 : INFO : this round is Tie Both choose PAPER
+2022-01-09 22:39:18,365 : INFO : user Selected SCISSOR
+2022-01-09 22:39:18,365 : INFO : computer Selected SCISSOR
+2022-01-09 22:39:18,365 : INFO : this round is Tie Both choose SCISSOR
+2022-01-09 22:39:21,288 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/2
+2022-01-09 22:39:28,339 : INFO : User Added : {'id': 134, 'users': 'devu', 'created_at': '2022-01-09T17:09:28.219840Z'}
+2022-01-09 22:39:29,316 : INFO : user Selected ROCK
+2022-01-09 22:39:29,316 : INFO : computer Selected SCISSOR
+2022-01-09 22:39:29,316 : INFO : you win,computer select scissor
+2022-01-09 22:39:30,421 : INFO : user Selected PAPER
+2022-01-09 22:39:30,421 : INFO : computer Selected PAPER
+2022-01-09 22:39:30,421 : INFO : this round is Tie Both choose PAPER
+2022-01-09 22:39:31,370 : INFO : user Selected SCISSOR
+2022-01-09 22:39:31,370 : INFO : computer Selected SCISSOR
+2022-01-09 22:39:31,370 : INFO : this round is Tie Both choose SCISSOR
+2022-01-09 22:40:45,289 : INFO : User Added : {'id': 135, 'users': 'devu', 'created_at': '2022-01-09T17:10:45.156851Z'}
+2022-01-09 22:40:46,872 : INFO : user Selected ROCK
+2022-01-09 22:40:46,872 : INFO : computer Selected ROCK
+2022-01-09 22:40:46,872 : INFO : this round is Tie Both choose ROCK
+2022-01-09 22:40:47,485 : INFO : user Selected PAPER
+2022-01-09 22:40:47,485 : INFO : computer Selected PAPER
+2022-01-09 22:40:47,485 : INFO : this round is Tie Both choose PAPER
+2022-01-09 22:40:48,000 : INFO : user Selected SCISSOR
+2022-01-09 22:40:48,008 : INFO : computer Selected PAPER
+2022-01-09 22:40:48,008 : INFO : you win ,computer select paper
+2022-01-09 22:40:49,066 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/2
+2022-01-09 22:41:00,865 : INFO : user Selected ROCK
+2022-01-09 22:41:00,865 : INFO : computer Selected SCISSOR
+2022-01-09 22:41:00,865 : INFO : you win,computer select scissor
+2022-01-09 22:41:05,207 : INFO : user Selected PAPER
+2022-01-09 22:41:05,207 : INFO : computer Selected SCISSOR
+2022-01-09 22:41:05,993 : INFO : user Selected SCISSOR
+2022-01-09 22:41:05,993 : INFO : computer Selected ROCK
+2022-01-09 22:41:05,993 : INFO : you loose,computer select rock
+2022-01-09 22:42:14,624 : INFO : User Added : {'id': 136, 'users': 'devu', 'created_at': '2022-01-09T17:12:14.432607Z'}
+2022-01-09 22:42:15,369 : INFO : user Selected ROCK
+2022-01-09 22:42:15,377 : INFO : computer Selected ROCK
+2022-01-09 22:42:15,377 : INFO : this round is Tie Both choose ROCK
+2022-01-09 22:42:15,841 : INFO : user Selected PAPER
+2022-01-09 22:42:15,841 : INFO : computer Selected PAPER
+2022-01-09 22:42:15,841 : INFO : this round is Tie Both choose PAPER
+2022-01-09 22:42:16,309 : INFO : user Selected SCISSOR
+2022-01-09 22:42:16,309 : INFO : computer Selected PAPER
+2022-01-09 22:42:16,309 : INFO : you win ,computer select paper
+2022-01-09 22:42:17,859 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/2
+2022-01-09 22:42:31,959 : INFO : User Added : {'id': 137, 'users': 'devu', 'created_at': '2022-01-09T17:12:31.775778Z'}
+2022-01-09 22:42:32,687 : INFO : user Selected ROCK
+2022-01-09 22:42:32,687 : INFO : computer Selected SCISSOR
+2022-01-09 22:42:32,687 : INFO : you win,computer select scissor
+2022-01-09 22:42:33,183 : INFO : user Selected PAPER
+2022-01-09 22:42:33,183 : INFO : computer Selected ROCK
+2022-01-09 22:42:33,183 : INFO : you win,computer select rock
+2022-01-09 22:42:33,592 : INFO : user Selected SCISSOR
+2022-01-09 22:42:33,592 : INFO : computer Selected SCISSOR
+2022-01-09 22:42:33,600 : INFO : this round is Tie Both choose SCISSOR
+2022-01-09 22:42:35,263 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/1
+2022-01-09 22:43:14,188 : INFO : User Added : {'id': 138, 'users': 'devu', 'created_at': '2022-01-09T17:13:14.024897Z'}
+2022-01-09 22:43:14,901 : INFO : user Selected ROCK
+2022-01-09 22:43:14,901 : INFO : computer Selected SCISSOR
+2022-01-09 22:43:14,901 : INFO : you win,computer select scissor
+2022-01-09 22:43:15,551 : INFO : user Selected PAPER
+2022-01-09 22:43:15,551 : INFO : computer Selected ROCK
+2022-01-09 22:43:15,551 : INFO : you win,computer select rock
+2022-01-09 22:43:16,031 : INFO : user Selected SCISSOR
+2022-01-09 22:43:16,039 : INFO : computer Selected PAPER
+2022-01-09 22:43:16,039 : INFO : you win ,computer select paper
+2022-01-09 22:43:16,642 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/0
+2022-01-09 22:43:44,904 : INFO : User Added : {'id': 139, 'users': 'devu', 'created_at': '2022-01-09T17:13:44.746816Z'}
+2022-01-09 22:43:45,372 : INFO : user Selected ROCK
+2022-01-09 22:43:45,372 : INFO : computer Selected SCISSOR
+2022-01-09 22:43:45,372 : INFO : you win,computer select scissor
+2022-01-09 22:43:45,764 : INFO : user Selected PAPER
+2022-01-09 22:43:45,764 : INFO : computer Selected ROCK
+2022-01-09 22:43:45,764 : INFO : you win,computer select rock
+2022-01-09 22:43:46,092 : INFO : user Selected SCISSOR
+2022-01-09 22:43:46,092 : INFO : computer Selected PAPER
+2022-01-09 22:43:46,092 : INFO : you win ,computer select paper
+2022-01-09 22:43:46,485 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/0
+2022-01-09 22:44:23,013 : INFO : User Added : {'id': 140, 'users': 'devu', 'created_at': '2022-01-09T17:14:22.805841Z'}
+2022-01-09 22:44:23,623 : INFO : user Selected ROCK
+2022-01-09 22:44:23,623 : INFO : computer Selected ROCK
+2022-01-09 22:44:23,623 : INFO : this round is Tie Both choose ROCK
+2022-01-09 22:44:24,070 : INFO : user Selected PAPER
+2022-01-09 22:44:24,070 : INFO : computer Selected ROCK
+2022-01-09 22:44:24,070 : INFO : you win,computer select rock
+2022-01-09 22:44:24,520 : INFO : user Selected SCISSOR
+2022-01-09 22:44:24,520 : INFO : computer Selected SCISSOR
+2022-01-09 22:44:24,520 : INFO : this round is Tie Both choose SCISSOR
+2022-01-09 22:44:25,660 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/2
+2022-01-09 22:44:31,647 : INFO : User Added : {'id': 141, 'users': 'devu', 'created_at': '2022-01-09T17:14:31.439491Z'}
+2022-01-09 22:44:32,544 : INFO : user Selected ROCK
+2022-01-09 22:44:32,552 : INFO : computer Selected PAPER
+2022-01-09 22:44:32,552 : INFO : you loose, computer choose Paper.
+2022-01-09 22:44:32,872 : INFO : user Selected PAPER
+2022-01-09 22:44:32,872 : INFO : computer Selected PAPER
+2022-01-09 22:44:32,872 : INFO : this round is Tie Both choose PAPER
+2022-01-09 22:44:33,234 : INFO : user Selected SCISSOR
+2022-01-09 22:44:33,234 : INFO : computer Selected SCISSOR
+2022-01-09 22:44:33,234 : INFO : this round is Tie Both choose SCISSOR
+2022-01-09 22:44:33,610 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:44:33,610 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:47:40,594 : INFO : User Added : {'id': 142, 'users': 'devu', 'created_at': '2022-01-09T17:17:40.314275Z'}
+2022-01-09 22:47:41,288 : INFO : user Selected ROCK
+2022-01-09 22:47:41,296 : INFO : computer Selected PAPER
+2022-01-09 22:47:41,296 : INFO : you loose, computer choose Paper.
+2022-01-09 22:47:41,861 : INFO : user Selected PAPER
+2022-01-09 22:47:41,861 : INFO : computer Selected SCISSOR
+2022-01-09 22:47:42,279 : INFO : user Selected SCISSOR
+2022-01-09 22:47:42,279 : INFO : computer Selected SCISSOR
+2022-01-09 22:47:42,279 : INFO : this round is Tie Both choose SCISSOR
+2022-01-09 22:47:42,671 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:47:42,671 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/1
+2022-01-09 22:47:50,384 : INFO : User Added : {'id': 143, 'users': 'devu', 'created_at': '2022-01-09T17:17:50.229618Z'}
+2022-01-09 22:47:50,962 : INFO : user Selected ROCK
+2022-01-09 22:47:50,962 : INFO : computer Selected PAPER
+2022-01-09 22:47:50,962 : INFO : you loose, computer choose Paper.
+2022-01-09 22:47:51,310 : INFO : user Selected PAPER
+2022-01-09 22:47:51,310 : INFO : computer Selected PAPER
+2022-01-09 22:47:51,310 : INFO : this round is Tie Both choose PAPER
+2022-01-09 22:47:51,942 : INFO : user Selected PAPER
+2022-01-09 22:47:51,942 : INFO : computer Selected PAPER
+2022-01-09 22:47:51,942 : INFO : this round is Tie Both choose PAPER
+2022-01-09 22:47:52,306 : INFO : Computer won the game! click at New game To play again
+2022-01-09 22:47:52,306 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/2
+2022-01-09 22:48:11,399 : INFO : User Added : {'id': 144, 'users': 'devu', 'created_at': '2022-01-09T17:18:11.239880Z'}
+2022-01-09 22:48:12,739 : INFO : user Selected ROCK
+2022-01-09 22:48:12,739 : INFO : computer Selected ROCK
+2022-01-09 22:48:12,739 : INFO : this round is Tie Both choose ROCK
+2022-01-09 22:48:13,303 : INFO : user Selected PAPER
+2022-01-09 22:48:13,303 : INFO : computer Selected ROCK
+2022-01-09 22:48:13,303 : INFO : you win,computer select rock
+2022-01-09 22:48:13,844 : INFO : user Selected SCISSOR
+2022-01-09 22:48:13,844 : INFO : computer Selected ROCK
+2022-01-09 22:48:13,844 : INFO : you loose,computer select rock
+2022-01-09 22:48:14,374 : INFO : This game is tie! click at New game To play again
+2022-01-09 22:48:14,374 : INFO : This is 3 round game and This game is tie! click at New game To play again with 2/2
+2022-01-09 22:49:46,469 : WARNING : Forbidden: /api/game/predict/value/
+2022-01-09 22:50:50,370 : WARNING : Method Not Allowed: /api/game/addusers/
+2022-01-09 22:51:28,045 : ERROR : Internal Server Error: /api/game/addusers
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\utils\deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\dell\Desktop\django-game\.game\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/game/addusers/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-01-09 22:51:56,307 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 22:52:41,533 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 22:54:02,121 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 22:54:57,728 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 22:56:46,540 : WARNING : Not Found: /api/game/
+2022-01-09 22:56:58,930 : WARNING : Method Not Allowed: /api/game/addusers/
+2022-01-09 22:57:04,144 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 22:58:23,010 : WARNING : Forbidden: /api/game/predict/value/
+2022-01-09 22:58:26,462 : WARNING : Forbidden: /api/game/predict/value/
+2022-01-09 22:58:27,087 : WARNING : Forbidden: /api/game/predict/value/
+2022-01-09 22:58:33,450 : WARNING : Forbidden: /api/game/predict/value/
+2022-01-09 22:58:36,577 : WARNING : Forbidden: /api/game/predict/value/
+2022-01-09 23:02:54,752 : INFO : C:\Users\dell\Desktop\django-game\backend\backend\settings.py changed, reloading.
+2022-01-09 23:05:56,341 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 23:06:01,787 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 23:07:32,378 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:34,293 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:34,644 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:34,884 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:35,157 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:35,378 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:35,734 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:36,004 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:36,220 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:39,434 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:39,628 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:39,825 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:50,415 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:50,424 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:53,081 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:07:53,087 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:08:06,621 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:08:06,634 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:08:13,834 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:08:13,841 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:11:35,864 : WARNING : Not Found: /favicon.ico
+2022-01-09 23:11:38,045 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:11:38,051 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:11:46,311 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:11:46,318 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:13:00,201 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:13:00,210 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:13:19,632 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:13:19,641 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:19:51,763 : INFO : User Added : {'id': 145, 'users': 'devu', 'created_at': '2022-01-09T17:49:51.525362Z'}
+2022-01-09 23:19:54,297 : INFO : user Selected ROCK
+2022-01-09 23:19:54,297 : INFO : computer Selected ROCK
+2022-01-09 23:19:54,297 : INFO : this round is Tie Both choose ROCK
+2022-01-09 23:19:56,870 : INFO : user Selected PAPER
+2022-01-09 23:19:56,870 : INFO : computer Selected ROCK
+2022-01-09 23:19:56,870 : INFO : you win,computer select rock
+2022-01-09 23:19:58,873 : INFO : user Selected SCISSOR
+2022-01-09 23:19:58,873 : INFO : computer Selected SCISSOR
+2022-01-09 23:19:58,873 : INFO : this round is Tie Both choose SCISSOR
+2022-01-09 23:19:59,999 : INFO : This is 3 round game and User won the game! click at New game To play again with 3/2
+2022-01-09 23:20:26,414 : INFO : User Added : {'id': 146, 'users': 'devu', 'created_at': '2022-01-09T17:50:26.310890Z'}
+2022-01-09 23:20:44,492 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 23:21:29,324 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:21:34,423 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:21:34,924 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:21:46,209 : INFO : User Added : {'id': 147, 'users': 'devu', 'created_at': '2022-01-09T17:51:45.971177Z'}
+2022-01-09 23:21:55,882 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:21:56,610 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:08,439 : INFO : C:\Users\dell\Desktop\django-game\backend\game\api\views.py changed, reloading.
+2022-01-09 23:22:12,217 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:14,098 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:14,614 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:14,830 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:15,036 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:15,314 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:15,513 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:15,709 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:15,963 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:16,603 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:22:27,117 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:24:47,302 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:24:50,455 : WARNING : Forbidden: /api/game/addusers/
+2022-01-09 23:26:54,553 : WARNING : Method Not Allowed: /api/game/addusers/
+2022-01-09 23:27:54,410 : INFO : User Added : {'id': 148, 'users': 'testing', 'created_at': '2022-01-09T17:57:54.173678Z'}
+2022-01-09 23:28:07,725 : INFO : User Added : {'id': 149, 'users': 'devu', 'created_at': '2022-01-09T17:58:07.518038Z'}
+2022-01-09 23:28:08,770 : INFO : user Selected ROCK
+2022-01-09 23:28:08,770 : INFO : computer Selected ROCK
+2022-01-09 23:28:08,770 : INFO : this round is Tie Both choose ROCK
+2022-01-09 23:28:10,793 : INFO : user Selected PAPER
+2022-01-09 23:28:10,793 : INFO : computer Selected SCISSOR
+2022-01-09 23:28:11,361 : INFO : user Selected SCISSOR
+2022-01-09 23:28:11,361 : INFO : computer Selected ROCK
+2022-01-09 23:28:11,361 : INFO : you loose,computer select rock
+2022-01-09 23:28:11,832 : INFO : Computer won the game! click at New game To play again
+2022-01-09 23:28:11,832 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 3/1
+2022-01-09 23:29:11,519 : INFO : invalid: choose any one -- rock, paper, scissors
+2022-01-09 23:29:23,099 : INFO : user Selected PAPER
+2022-01-09 23:29:23,100 : INFO : computer Selected PAPER
+2022-01-09 23:29:23,100 : INFO : this round is Tie Both choose PAPER
+2022-01-09 23:30:30,068 : INFO : This is 3 round game and User won the game! click at New game To play again with 4/3
+2022-01-09 23:30:36,916 : INFO : This is 3 round game and User won the game! click at New game To play again with 4/0
+2022-01-09 23:30:41,278 : INFO : This is 3 round game and User won the game! click at New game To play again with 4/2
+2022-01-09 23:30:49,297 : INFO : Computer won the game! click at New game To play again
+2022-01-09 23:30:49,297 : INFO : This is 3 round game and Computer won the game! click at New game To play again with 8/4
+2022-01-09 23:31:00,933 : INFO : This is 3 round game and User won the game! click at New game To play again with 4/3
+2022-01-09 23:31:25,474 : INFO : C:\Users\dell\Desktop\django-game\backend\backend\settings.py changed, reloading.

@@ -25,7 +25,7 @@ class PredictValueMethod():
         response['com_data'] = self.predicted_val
 
         if user_val == predicted_val:
-            response['msg'] = 'this round is tie'
+            response['msg'] = 'this round is Tie Both choose {}'.format(options[user_val])
             response['user_score'] = True
             response['com_score'] = True
             logging.info('user Selected {}'.format(options[user_val]))
@@ -33,7 +33,7 @@ class PredictValueMethod():
             logging.info(response['msg'])
 
         elif user_val == ROCK and predicted_val == PAPER:
-            response['msg'] = 'computer won'
+            response['msg'] = 'you loose, computer choose Paper.'
             response['user_score'] = False
             response['com_score'] = True
             logging.info('user Selected {}'.format(options[user_val]))
@@ -41,7 +41,7 @@ class PredictValueMethod():
             logging.info(response['msg'])
 
         elif user_val == ROCK and predicted_val == SCISSOR:
-            response['msg'] = 'you win,computer select scissors'
+            response['msg'] = 'you win,computer select scissor'
             response['user_score'] = True
             response['com_score'] = False
             logging.info('user Selected {}'.format(options[user_val]))
@@ -49,7 +49,7 @@ class PredictValueMethod():
             logging.info(response['msg'])
 
         elif user_val == PAPER and predicted_val == SCISSOR:
-            response['msg'] = 'you loose,computer select scissors'
+            response['msg'] = 'you loose,computer select scissor'
             response['user_score'] = False
             response['com_score'] = True
             logging.info('user Selected {}'.format(options[user_val]))

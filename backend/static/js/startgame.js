@@ -3,9 +3,10 @@ $(document).ready(function(){
 
         e.preventDefault();
     var url =$(this).attr('href_url');
-    let username = $('#username').val()
+    let username = $('#username').val();
+    let csrf=window.CSRF_TOKEN;
 
-    mydata={username:username}
+    mydata={username:username,csrf:csrf}
 
     if(username == ''){
            console.log("enter username to start game")

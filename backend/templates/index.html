@@ -25,6 +25,7 @@
             <button id="btnRock" class="btn btn-primary btn-md center-block" href_url="{% url 'api_predict_value' %}" Style="width: 100px; margin-inline-start: 10px;" value=1 >Rock</button>
             <button id="btnPaper" class="btn btn-primary btn-md center-block" href_url="{% url 'api_predict_value' %}" Style="width: 100px; margin-inline-start: 10px;" value=2 >Paper</button>
             <button id="btnScissor" class="btn btn-primary btn-md center-block" href_url="{% url 'api_predict_value' %}" Style="width: 100px; margin-inline-start: 10px;" value=3 >Scissor</button>
+            <p>Play four times to get score</p>
          </div>
     </div><br>
 
@@ -32,15 +33,15 @@
 
     <div class="row" style="margin-block-start:70px;">
         <div class="center-block">
-            <button id="btnPridict" class="btn btn-primary btn-md center-block " Style="width: 100px; margin-inline-start: 10px; background-color: yellow; color:black;"></button>
+            <button id="btnPridict" class="btn btn-primary btn-md center-block " Style="width: 100px; margin-inline-start: 10px; background-color: yellow; color:black;" disabled></button>
          </div>
     </div><br>
 
     <div class="row">
         <div class="center-block">
-            <button type="hidden" id="hiddenbtn" href_url="{% url 'api_predict_final_score' %}" value=1 ></button>
+            <input type="hidden" id="hiddenbtn" href_url="{% url 'api_predict_final_score' %}" value=1 >
             <button id="yourScore" class="btn btn-primary btn-md center-block" Style="width: 100px; margin-inline-start: 10px;" value=0 disabled >Your Score</button>
-            <button id="comScore" class="btn btn-primary btn-md center-block" Style="width: 100px; margin-inline-start: 10px; background-color: yellow; color:black;" value=0 disabled >Computer Score</button>
+            <button id="comScore" class="btn btn-primary btn-md center-block" Style="width: 100px; margin-inline-start: 10px; background-color: yellow; color:black;" value=0 disabled >Com Score</button>
          </div>
     </div><br>
     <div class="row" id="new_row" style="display: none;">

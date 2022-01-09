@@ -5,6 +5,7 @@ $(document).ready(function(){
         $('#btnPaper').prop('disabled',false);
         $('#btnScissor').prop('disabled',false);
         $('#msg').text('');
+        $('#btnPridict').text('');
         $('#comScore').val(0);
         $('#yourScore').val(0);
         $('#hiddenbtn').val(1);
