@@ -1,0 +1,4 @@
+.game
+**/__pycache__
+**/db.sqlite3
+**/score.log
