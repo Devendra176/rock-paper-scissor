@@ -5,11 +5,11 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from rest_framework.permissions import AllowAny
-from .serializers import (AddUsersSerializer, PlayGameSerializer, FinalResultSerializer)
-from .predict_val import PredictValueMethod
+from game.api.serializers import (AddUsersSerializer, PlayGameSerializer, FinalResultSerializer)
+from game.api.predict_val import PredictValueMethod
 import random
 
-from .predict_val import logging
+from game.api.predict_val import logging
 
 class AddUser(CreateAPIView):
     serializer_class = AddUsersSerializer
