@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (AddUser, PredictValueView, FinalResultView )
+from game.api.views import (AddUser, PredictValueView, FinalResultView )
 
 urlpatterns = [
     path('addusers/', AddUser.as_view(), name='api_add_users'),

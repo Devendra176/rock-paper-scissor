@@ -1,0 +1,51 @@
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/theme/classic/new_game_content.css' %}"/>
+{% endblock css %}
+
+{% block new_content %}
+    {% include 'game/theme/classic/score_card.html' %}
+    <div class="row">
+
+        <div class="hidden" id="hiddenbtn" data-value=0></div>
+
+        <div class="column">
+
+            <div class="text-center game_image_div">
+                <img src="{% static 'images/theme/classic/rock.png' %}" id="game_image" href_url="{% url 'api_predict_value' %}" class="rounded mx-auto d-block game_image" alt="..." data-id=1>
+            </div>
+
+            <div class="text-center game_image_div">
+                <img src="{% static 'images/theme/classic/paper.png' %}" id="game_image" href_url="{% url 'api_predict_value' %}" class="rounded mx-auto d-block game_image" alt="..." data-id=2>
+            </div>
+
+            <div class="text-center game_image_div">
+                <img src="{% static 'images/theme/classic/scissors.png' %}" id="game_image" href_url="{% url 'api_predict_value' %}" class="rounded mx-auto d-block game_image" alt="..." data-id=3>
+            </div>
+
+        </div>
+
+        <div class="column your_option_output game_image_com_div">
+            <div class="output_image_div hidden">
+                <img src="" id="your_option_output" class="rounded mx-auto d-block game_image_com" alt="...">
+            </div>
+        </div>
+
+        <div class="column com_option_output game_image_com_div">
+            <div class="output_image_div hidden">
+                <img src="" id="com_option_output" class="rounded mx-auto d-block game_image_com" alt="...">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="text-center game_image_div game_image_com_div">
+                <img src="{% static 'images/theme/classic/rock-flip.png' %}" id="game_image_com" class="rounded mx-auto d-block game_image_com" alt="...">
+            </div>
+        </div>
+    </div>
+    {% include 'game/theme/classic/game_options.html' %}
+{% endblock new_content %}
+
+
+<script type="text/javascript" src="{% static 'js/theme/classic/change_image.js' %}" ></script>
+<script type="text/javascript" src="{% static 'js/common/main.js' %}" ></script>

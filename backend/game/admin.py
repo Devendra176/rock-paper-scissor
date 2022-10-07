@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .models import PlayedGameBy
-# Register your models here.
+from game.models import PlayedGameBy, ThemeAvailable
+
+
 admin.site.register(PlayedGameBy)
+admin.site.register(ThemeAvailable)

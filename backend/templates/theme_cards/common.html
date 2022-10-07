@@ -1,0 +1,11 @@
+{% load static %}
+{% for theme in theme_data %}
+    <div class="card horizontal_card" style="width: 18rem;">
+        <img src="{{theme.theme_image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{theme.theme_name}}</h5>
+            <p class="card-text">{{theme.theme_des}}</p>
+            <button type="button" class="btn btn-secondary btn-sm theme_btn" data-value="{{theme.theme_id}}">Use This</button>
+        </div>
+    </div>
+{% endfor %}

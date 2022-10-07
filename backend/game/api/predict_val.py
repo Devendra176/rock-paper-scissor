@@ -26,8 +26,8 @@ class PredictValueMethod():
 
         if user_val == predicted_val:
             response['msg'] = 'this round is Tie Both choose {}'.format(options[user_val])
-            response['user_score'] = True
-            response['com_score'] = True
+            response['user_score'] = False
+            response['com_score'] = False
             logging.info('user Selected {}'.format(options[user_val]))
             logging.info('computer Selected {}'.format(options[predicted_val]))
             logging.info(response['msg'])
@@ -90,13 +90,14 @@ class PredictValueMethod():
         response = {}
         if self.user_val > self.predicted_val:
             response['msg'] = 'User won the game! click at New game To play again'
-            logging.info('This is 3 round game and {} with {}/{}'.format(response['msg'],self.user_val,self.predicted_val))
+            response['user_won'] = True
+            logging.info('User Won the game! score: user-{}, computer-{}'.format(self.user_val, self.predicted_val))
         elif self.user_val == self.predicted_val:
             response['msg'] = 'This game is tie! click at New game To play again'
-            logging.info(response['msg'])
-            logging.info('This is 3 round game and {} with {}/{}'.format(response['msg'],self.user_val,self.predicted_val))
+            response['user_won'] = None
+            logging.info('This is Tie score: user-{}, computer-{}'.format(self.user_val,self.predicted_val))
         else:
             response['msg'] = 'Computer won the game! click at New game To play again'
-            logging.info(response['msg'])
-            logging.info('This is 3 round game and {} with {}/{}'.format(response['msg'],self.predicted_val,self.user_val))
+            response['user_won'] = False
+            logging.info('computer won the game score: user-{}, computer-{}'.format(self.predicted_val,self.user_val))
         return response
