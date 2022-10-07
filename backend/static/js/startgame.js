@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $("#start_game",).click(function (e) {
-
-        e.preventDefault();
+    e.preventDefault();
+    
     var url =$(this).attr('href_url');
     let username = $('#username').val();
     let csrf=window.CSRF_TOKEN;
