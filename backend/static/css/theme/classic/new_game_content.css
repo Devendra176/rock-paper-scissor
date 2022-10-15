@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .game_image_div {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .game_image_com_div{
+    margin-block: 180px;
+  }
+
+  .game_image:hover {
+    outline: 1px solid green;
+    /* zoom: 1; */
+    transform: scale(1.1);
+  }
+
+  img.game_image {
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+  }
+
+img.game_image_com {
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+}
+
+.score_card_main_div{
+  margin: 10px;
+  text-align: center;
+  font-family:courier;
+}
+.score_card_your{
+  margin-inline-start: 50px;
+  margin-right: auto;
+  font-size: 35px;
+}
+
+.score_card_com{
+  margin-left: auto;
+  font-size: 35px;
+}
+
+.hidden{
+  display: none;
+}
+
+.game_options{
+  cursor: pointer;
+  border:1px solid #CCC;
+  background:#DDD;
+  padding: 5px;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+}
+
+.score_btn{
+  margin-inline-start: 150px;
+  margin-right: auto;
+}

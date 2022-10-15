@@ -1,5 +1,5 @@
 from django.urls import path,include
-from .views import (GetFrontPage)
+from game.views import (GetFrontPage)
 
 urlpatterns = [
     path('frontend/', GetFrontPage.as_view()),

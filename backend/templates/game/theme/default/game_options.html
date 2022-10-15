@@ -1,0 +1,6 @@
+{% load static %}
+<div class="d-flex score_card_main_div">
+    <button class="btn btn-success score_btn" data-id="new_game">New Game</button>
+    <button class="btn btn-success score_btn hidden" data-id="get_score" id="get_score_btn" href_url="{% url 'api_predict_final_score' %}">Get Score</button>
+    <button class="btn btn-success score_btn" data-id="end_game">End Game</button>
+</div>
