@@ -1,20 +1,23 @@
 #!/bin/bash
 
-# Install necessary packages
-sudo apt-get update
-sudo apt-get install -y python3 python3-pip git gunicorn
+# Navigate to your project directory
+cd /home/ubuntu/rock-paper-scissor
 
-# Clone the GitHub repository
-git clone https://github.com/Devendra176/rock-paper-scissor.git /home/ubuntu
+# Pull the latest changes from the main branch and merge them
+git pull --no-rebase origin main
 
-# Change directory to your Django project
-cd /home/ubuntu/rock-paper-scissor/backend/
+# Activate your Python virtual environment (if applicable)
+source ../env/bin/activate
 
-# Install Python dependencies
-pip3 install -r requirements.txt
+cd /home/ubuntu/rock-paper-scissor/backend
+# Install/update Python dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
 
-# Collect static files
-python3 manage.py collectstatic --noinput
+# Migration
+python manage.py migrate
 
-# Restart Gunicorn server
+# Restart Gunicorn or any other services if necessary
 sudo systemctl restart gunicorn
+
+sudo systemctl restart nginx
