@@ -3,18 +3,8 @@
 # Navigate to your project directory
 cd /home/ubuntu/rock-paper-scissor
 
-# Stash any local changes
-git stash
-
-# Pull the latest changes from the main branch
-git pull origin main
-
-# Check if there are any conflicts
-if git status | grep -q "Unmerged paths"; then
-    # If there are conflicts, exit with an error message
-    echo "Error: There are unresolved merge conflicts."
-    exit 1
-fi
+# Pull the latest changes from the main branch and merge them
+git pull --no-rebase origin main
 
 # Activate your Python virtual environment (if applicable)
 source ../env/bin/activate
