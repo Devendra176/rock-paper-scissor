@@ -24,3 +24,5 @@ python manage.py migrate
 sudo systemctl restart gunicorn
 
 sudo systemctl restart nginx
+
+# Changes

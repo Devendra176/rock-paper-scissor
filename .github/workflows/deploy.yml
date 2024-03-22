@@ -25,6 +25,10 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
+    - name: Copy deploy.sh files to remote server 🚙
+      run: |
+        scp -r deploy.sh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }}:/home/ubuntu/rock-paper-scissor/
+
     - name: Deploy to EC2
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} 'chmod +x /home/ubuntu/rock-paper-scissor/deploy.sh && /home/ubuntu/rock-paper-scissor/deploy.sh'
